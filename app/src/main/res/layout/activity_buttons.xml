@@ -12,6 +12,14 @@
         android:id="@+id/lucky_number_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="4dp"
         android:text="Lucky Number"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/location_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
         android:textAllCaps="false" />
 </LinearLayout>

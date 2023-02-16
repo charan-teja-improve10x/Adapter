@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class ButtonsActivity extends AppCompatActivity {
     Button luckyNumberBtn;
+    Button locationBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +16,12 @@ public class ButtonsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_buttons);
         initViews();
         handleLuckyNumberBtn();
+        handleLocationBtn();
     }
 
     public void initViews() {
         luckyNumberBtn = findViewById(R.id.lucky_number_btn);
+        locationBtn = findViewById(R.id.location_btn);
     }
 
     public void handleLuckyNumberBtn() {
@@ -27,8 +30,19 @@ public class ButtonsActivity extends AppCompatActivity {
         });
     }
 
+    public void handleLocationBtn(){
+        locationBtn.setOnClickListener(v -> {
+         navigateToLocationActivity();
+        });
+    }
+
     public void navigateToLuckyNumberActivity() {
         Intent luckyNumberActivityIntent = new Intent(this, LuckyNumberActivity.class);
         startActivity(luckyNumberActivityIntent);
+    }
+
+    public void navigateToLocationActivity(){
+        Intent locationActivityIntent = new Intent(this,LocationActivity.class);
+        startActivity(locationActivityIntent);
     }
 }
