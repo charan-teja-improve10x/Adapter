@@ -9,6 +9,7 @@ import android.widget.Button;
 public class ButtonsActivity extends AppCompatActivity {
     Button luckyNumberBtn;
     Button locationBtn;
+    Button dOBBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +18,13 @@ public class ButtonsActivity extends AppCompatActivity {
         initViews();
         handleLuckyNumberBtn();
         handleLocationBtn();
+        handleDateOfBirthBtn();
     }
 
     public void initViews() {
         luckyNumberBtn = findViewById(R.id.lucky_number_btn);
         locationBtn = findViewById(R.id.location_btn);
+        dOBBtn = findViewById(R.id.dob_btn);
     }
 
     public void handleLuckyNumberBtn() {
@@ -36,6 +39,12 @@ public class ButtonsActivity extends AppCompatActivity {
         });
     }
 
+    public void handleDateOfBirthBtn(){
+        dOBBtn.setOnClickListener(v -> {
+            navigateToDateOfBirthActivity();
+        });
+    }
+
     public void navigateToLuckyNumberActivity() {
         Intent luckyNumberActivityIntent = new Intent(this, LuckyNumberActivity.class);
         startActivity(luckyNumberActivityIntent);
@@ -44,5 +53,9 @@ public class ButtonsActivity extends AppCompatActivity {
     public void navigateToLocationActivity(){
         Intent locationActivityIntent = new Intent(this,LocationActivity.class);
         startActivity(locationActivityIntent);
+    }
+    public void navigateToDateOfBirthActivity(){
+        Intent dateOfBirthIntent = new Intent(this,DateOfBirthActivity.class);
+        startActivity(dateOfBirthIntent);
     }
 }
