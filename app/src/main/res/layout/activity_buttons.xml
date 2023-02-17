@@ -32,4 +32,12 @@
         android:layout_marginTop="8dp"
         android:text="Date of Birth"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/team_c_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Team C List"
+        android:textAllCaps="false" />
 </LinearLayout>
